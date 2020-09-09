@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class MybatisPlusConfig {
@@ -22,7 +21,6 @@ public class MybatisPlusConfig {
      * mybatis-plus SQL执行效率插件【生产环境可以关闭】
      */
     @Bean
-    @Profile({"local","dev","test"})// 设置 dev test 环境开启，线上不推荐
 //    @Profile({"dev"})// 设置 dev环境开启，线上不推荐
     public PerformanceInterceptor performanceInterceptor() {
         PerformanceInterceptor interceptor = new PerformanceInterceptor();

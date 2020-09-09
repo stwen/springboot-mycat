@@ -1,9 +1,13 @@
 package com.stwen.mycat.controller;
 
 
+import com.stwen.mycat.dao.GlobalUserDao;
+import com.stwen.mycat.entity.GlobalUser;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -16,5 +20,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/global-user")
 public class GlobalUserController {
+
+    @Resource
+    private GlobalUserDao globalUserDao;
+
+    @RequestMapping("/save")
+    public int save() {
+
+        // 全局表，不用手动设定id
+        GlobalUser globalUser = new GlobalUser();
+        globalUser.setName("stwen").setBalance(new BigDecimal(99.9));
+        int num = globalUserDao.insert(globalUser);
+//        int num = globalUserDao.saveOne(13, "stwen", new BigDecimal(99.9));
+        return num;
+    }
 
 }
