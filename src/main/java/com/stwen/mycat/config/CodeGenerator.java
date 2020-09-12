@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class CodeGenerator {
     //逗号分隔，如t_user,t_product
-    private static String tables = "t_branch_user,t_global_user";
+    private static String tables = "t_test,t_task_test";
     private static String tablePrefix = "t_";
     private static String author = "stwen_gan";
     private static String parentPackage = "com.stwen.mycat";
@@ -28,7 +28,7 @@ public class CodeGenerator {
     private static String driver = "com.mysql.jdbc.Driver";
     private static String username = "root";
     private static String password = "123456";
-    private static String url = "jdbc:mysql://127.0.0.1:8066/TESTDB?useUnicode=true&characterEncoding=utf8";
+    private static String url = "jdbc:mysql://192.168.239.128:8066/test_db?useUnicode=true&characterEncoding=utf8";
 
 
     public static void main(String[] args) {
