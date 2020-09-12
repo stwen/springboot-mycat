@@ -14,11 +14,11 @@ import java.util.List;
 
 /**
  * <p>
- * 服务实现类
+ *  服务实现类
  * </p>
  *
  * @author stwen_gan
- * @since 2020-09-09
+ * @since 2020-09-10
  */
 @Service
 public class BranchUserServiceImpl extends ServiceImpl<BranchUserDao, BranchUser> implements IBranchUserService {

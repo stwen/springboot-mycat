@@ -1,6 +1,5 @@
 package com.stwen.mycat.entity;
 
-import java.math.BigDecimal;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -16,7 +15,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author stwen_gan
- * @since 2020-09-09
+ * @since 2020-09-10
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -30,16 +29,16 @@ public class GlobalUser implements Serializable {
     private Integer id;
 
     /**
-     * ??
+     * 名称
      */
     @TableField("NAME")
     private String name;
 
     /**
-     * ??
+     * 年龄
      */
-    @TableField("BALANCE")
-    private BigDecimal balance;
+    @TableField("AGE")
+    private Integer age;
 
 
 }

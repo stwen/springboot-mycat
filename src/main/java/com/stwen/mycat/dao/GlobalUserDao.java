@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author stwen_gan
- * @since 2020-09-09
+ * @since 2020-09-10
  */
 public interface GlobalUserDao extends BaseMapper<GlobalUser> {
 

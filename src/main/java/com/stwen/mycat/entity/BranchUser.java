@@ -1,6 +1,7 @@
 package com.stwen.mycat.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -8,7 +9,6 @@ import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * <p>
@@ -16,7 +16,7 @@ import java.math.BigDecimal;
  * </p>
  *
  * @author stwen_gan
- * @since 2020-09-09
+ * @since 2020-09-10
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -32,12 +32,14 @@ public class BranchUser implements Serializable {
     /**
      * 名称
      */
+    @TableField("NAME")
     private String name;
 
     /**
-     * 余额
+     * 年龄
      */
-    private BigDecimal balance;
+    @TableField("AGE")
+    private Integer age;
 
 
 }

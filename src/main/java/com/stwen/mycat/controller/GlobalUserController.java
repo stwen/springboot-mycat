@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
 
 /**
  * <p>
@@ -15,7 +14,7 @@ import java.math.BigDecimal;
  * </p>
  *
  * @author stwen_gan
- * @since 2020-09-09
+ * @since 2020-09-10
  */
 @RestController
 @RequestMapping("/global-user")
@@ -29,10 +28,9 @@ public class GlobalUserController {
 
         // 全局表，不用手动设定id
         GlobalUser globalUser = new GlobalUser();
-        globalUser.setName("stwen").setBalance(new BigDecimal(99.9));
+        globalUser.setName("stwen").setAge(18);
         int num = globalUserDao.insert(globalUser);
-//        int num = globalUserDao.saveOne(13, "stwen", new BigDecimal(99.9));
+//        int num = globalUserDao.saveOne(13, "stwen", 18);
         return num;
     }
-
 }

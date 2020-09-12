@@ -6,11 +6,11 @@ import com.stwen.mycat.entity.BranchUser;
 
 /**
  * <p>
- * 服务类
+ *  服务类
  * </p>
  *
  * @author stwen_gan
- * @since 2020-09-09
+ * @since 2020-09-10
  */
 public interface IBranchUserService extends IService<BranchUser> {
 

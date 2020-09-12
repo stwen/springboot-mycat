@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author stwen_gan
- * @since 2020-09-09
+ * @since 2020-09-10
  */
 @Service
 public class GlobalUserServiceImpl extends ServiceImpl<GlobalUserDao, GlobalUser> implements IGlobalUserService {
